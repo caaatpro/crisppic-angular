@@ -30,9 +30,8 @@ app.init = co.wrap(function *(overwriteDB) {
   // create http and websocket servers and start listening for requests
   app.server = app.listen(config.app.port);
   ws.listen(app.server);
-  if (config.app.env !== 'test') {
-    console.log('KOAN listening on port ' + config.app.port);
-  }
+
+  console.log('KOAN listening on port ' + config.app.port);
 });
 
 // auto init if this app is not being initialized by another module (i.e. using require('./app').init();)

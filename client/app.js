@@ -34,12 +34,6 @@ angular
           delete $window.localStorage.token;
           delete $window.localStorage.user;
           $window.location.replace('/login.html');
-        },
-        clearDatabase: function () {
-          var self = this;
-          api.debug.clearDatabase().success(function () {
-            self.logout();
-          });
         }
       };
 

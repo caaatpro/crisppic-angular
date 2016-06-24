@@ -68,12 +68,6 @@ angular.module('koan.common').factory('api', function ($rootScope, $http, $windo
     }
   };
 
-  api.debug = {
-    clearDatabase: function () {
-      return $http({method: 'POST', url: apiBase + '/debug/clearDatabase', headers: headers});
-    }
-  };
-
   // websocket data event (which transmits json-rpc payloads)
   function index(obj, i) {
     return obj[i];

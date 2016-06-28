@@ -22,7 +22,7 @@ module.exports = function (app) {
   require('../controllers/login').init(app);
 
   // serve the static files in the /client directory, use caching only in production (7 days)
-  var sendOpts = config.app.env === 'production' ? {root: 'client', maxage: config.app.cacheTime} : {root: 'client'};
+  var sendOpts = {root: 'client', maxage: config.app.cacheTime};
   app.use(function *(next) {
     // do not handle /api paths
     if (this.path.substr(0, 5).toLowerCase() === '/api/') {

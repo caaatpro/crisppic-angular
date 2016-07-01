@@ -23,7 +23,7 @@ var platformConfig = {
     cacheTime: 7 * 24 * 60 * 60 * 1000 /* default caching time (7 days) for static files, calculated in milliseconds */
   },
   mongo: {
-    url: 'mongodb://192.168.1.104:27017/koan-dev'
+    url: 'mongodb://192.168.1.100:27017/koan-dev'
   },
   oauth: {
     facebook: {
